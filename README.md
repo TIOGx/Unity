@@ -25,6 +25,10 @@ ex2) [Project] 4장 개인 프로젝트
 </a>
 <a href="https://github.com/ggjae">
   <img src="https://github.com/ggjae.png" width="100">
+</a>
+<a href="https://github.com/recorder08">
+  <img src="https://github.com/recorder08.png" width="100">
+</a>
 </p>
   
 
