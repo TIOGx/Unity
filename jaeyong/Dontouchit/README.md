@@ -2,7 +2,7 @@
 
 ![녹화_2021_07_13_18_04_00_191](https://user-images.githubusercontent.com/22047551/125424802-5430f7e3-479e-48d3-81a9-3c6d0d616134.gif)
 
-참조 : https://www.youtube.com/watch?v=vPdD0Nk5-3U&t=307s
+
 
 ## 만드는 중 ISSUE
 Coroutine이 무엇인지, Singleton이 무엇인지, SerializeField에 대한 ISSUE
@@ -86,3 +86,6 @@ private static GameManager _instance;
         }
     }
 ```
+
+
+ref) https://www.youtube.com/watch?v=vPdD0Nk5-3U&t=307s
