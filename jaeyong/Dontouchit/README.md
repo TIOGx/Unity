@@ -1,5 +1,12 @@
 # Dontouchit (Don't Touch It)
 
+![녹화_2021_07_13_18_04_00_191](https://user-images.githubusercontent.com/22047551/125424802-5430f7e3-479e-48d3-81a9-3c6d0d616134.gif)
+
+참조 : https://www.youtube.com/watch?v=vPdD0Nk5-3U&t=307s
+
+## 만드는 중 ISSUE
+Coroutine이 무엇인지, Singleton이 무엇인지, SerializeField에 대한 ISSUE
+
 ## Tilemap
 
 2D에서 Tilemap을 이용하여 바닥을 생성하였다. Tile Size와 Grid size가 다를 때에는 Sprite Image Inspector에서 Pixels per unit을 픽셀에 맞게 변경시켜주면 사이즈가 올바르게 변경된다.
