@@ -37,20 +37,32 @@ GameManager.cs를 먼저 확인하게 되었다.
 
 첫번째 오브젝트 GameManager
 **using TMPro**를 사용한것으로 미루어 보아, TextMeshProUGUI를 오브젝트로 사용했다는 것을 알게 되었고 List와 Dictionary를 이용한 것은 다양한 Bubble들의 값이 10인지 체크하는 부분에서 사용된다고 생각이 들었다.
+  
 처음 시작시에 **Start() 메소드**부터 살펴보자.
-Time.timeScale = 1; 을 사용한 이유는 게임이 실제 시간과 동일하게 흘러가게 함이고, isDragging은 추후에 true와 false를 번갈아가며 사용할 계획처럼 느껴졌다.
-SetActive는 Inspector에 체크할 수 있고 체크를 풀 수 있는데. 체크 활성화는 존재하는 것을 그대로 존재하게 하는 것과 체크 비활성화는 존재하지만 없는 것처럼 해주는 것이다.
-max_timer나 다양한 변수들을 초기화해주는 부분이다. SettingBoard() 메소드를 실행시키니 **SettingBoard() 메소드**에 대해 알아보자.
-좌표를 이용하여 bubble프리팹을 만드는데, 프리팹에 적용되는 매개변수들이 특이하였다. Random.Range는 본 적이 있고 이렇게 인자를 받는 프리팹은 처음보았다. 프리팹이 인자를 받는다기보다는 Instantiate가 인자를 많이 받는다고 생각이 들었고 찾아보니 첫번째 인자는 오브젝트, 두번째는 생성 위치(vector j,i), 세번째는 생성시 회전 값이라고 한다.
-아마 좌표마다 프리팹을 생성해주기 위하여 이렇게 코드를 구현한 것 같았다.
+Time.timeScale = 1; 을 사용한 이유는 게임이 실제 시간과 동일하게 흘러가게 함이고, isDragging은 추후에 true와 false를 번갈아가며 사용할 계획처럼 느껴졌다.  
+
+SetActive는 Inspector에 체크할 수 있고 체크를 풀 수 있는데. 체크 활성화는 존재하는 것을 그대로 존재하게 하는 것과 체크 비활성화는 존재하지만 없는 것처럼 해주는 것이다.  
+
+max_timer나 다양한 변수들을 초기화해주는 부분이다. SettingBoard() 메소드를 실행시키니 **SettingBoard() 메소드**에 대해 알아보자.  
+
+좌표를 이용하여 bubble프리팹을 만드는데, 프리팹에 적용되는 매개변수들이 특이하였다. Random.Range는 본 적이 있고 이렇게 인자를 받는 프리팹은 처음보았다. 프리팹이 인자를 받는다기보다는 Instantiate가 인자를 많이 받는다고 생각이 들었고 찾아보니 첫번째 인자는 오브젝트, 두번째는 생성 위치(vector j,i), 세번째는 생성시 회전 값이라고 한다.  
+
+아마 좌표마다 프리팹을 생성해주기 위하여 이렇게 코드를 구현한 것 같았다.  
+
 이제 **Update**를 살펴보자.
-Time.deltaTime이 늘을때마다 fillAmount가 감소되고, F키를 받으면 아마 무언가 하고싶었는데 하다 만 것 같다. 마우스 버튼을 눌렀을 때와 누르고 있을 때, 마우스 버튼을 뗐을 때에 대한 각각의 함수가 진행되었다.
-Input.mousePosition의 반환값이 벡터(좌표)임에도 불구하고 상대적 좌표이기 때문에, Camera.ScreenToWorldPoint를 사용하였다. 처음에는 Input.mousePosition을 그대로 사용하면 안되나?라는 생각을 하여서 바꿔서 진행해보았지만 오른쪽위의 앵커로부터 좌표들을 생각하여 드래그가 이상하게 되는 현상이 일어났다. ScreenToWorldPoint로 좌표를 얻어 버블을 선택할 때 메소드를 확인하고 싶어 update 안의 SelectBubble을 살펴보게 되었다.
-이 전에, MouseDrag 먼저 살펴보자. MouseDrag는 SelectField를 이용하여(UI 중 하나로 우리가 드래그할 때 나오는 상자) active를 활성화시켜주고, width와 height를 이용하여 sizeDelta 함수와 anchoredPosition으로 값을 바꾸어준다.
-**SelectBubble**은 Bubbles 안의 버블들을 전부 확인하면서 min, max 값을 구하고 있었는데, 이 식을 절대값을 이용하면 되지 않나? 라는 생각이 들었다. 일일히 구하는 것 보다 선택되지 않고 선택된 것을 구분하는게 좀 더 편한 방법이 있을 거라는 생각이 들어서 찾아보게 되었다.
-또한 localScale을 바꿔주는데에 있어 선형보강법(Lerp)를 사용하였고, 첫번째 인자는 처음 크기, 두번째 인자는 변경하게 될 인자, 세번째 인자는 걸리는 시간으로 보통 위치를 바꾸는데에 많이 사용하는데 이 방법을 사용한것은 신기하게 느껴졌다.
+Time.deltaTime이 늘을때마다 fillAmount가 감소되고, F키를 받으면 아마 무언가 하고싶었는데 하다 만 것 같다. 마우스 버튼을 눌렀을 때와 누르고 있을 때, 마우스 버튼을 뗐을 때에 대한 각각의 함수가 진행되었다.  
+
+Input.mousePosition의 반환값이 벡터(좌표)임에도 불구하고 상대적 좌표이기 때문에, Camera.ScreenToWorldPoint를 사용하였다. 처음에는 Input.mousePosition을 그대로 사용하면 안되나?라는 생각을 하여서 바꿔서 진행해보았지만 오른쪽위의 앵커로부터 좌표들을 생각하여 드래그가 이상하게 되는 현상이 일어났다. ScreenToWorldPoint로 좌표를 얻어 버블을 선택할 때 메소드를 확인하고 싶어 update 안의 SelectBubble을 살펴보게 되었다.  
+
+**이 전에** MouseDrag 먼저 살펴보자. MouseDrag는 SelectField를 이용하여(UI 중 하나로 우리가 드래그할 때 나오는 상자) active를 활성화시켜주고, width와 height를 이용하여 sizeDelta 함수와 anchoredPosition으로 값을 바꾸어준다.  
+
+**SelectBubble**은 Bubbles 안의 버블들을 전부 확인하면서 min, max 값을 구하고 있었는데, 이 식을 절대값을 이용하면 되지 않나? 라는 생각이 들었다. 일일히 구하는 것 보다 선택되지 않고 선택된 것을 구분하는게 좀 더 편한 방법이 있을 거라는 생각이 들어서 찾아보게 되었다.  
+
+또한 localScale을 바꿔주는데에 있어 선형보강법(Lerp)를 사용하였고, 첫번째 인자는 처음 크기, 두번째 인자는 변경하게 될 인자, 세번째 인자는 걸리는 시간으로 보통 위치를 바꾸는데에 많이 사용하는데 이 방법을 사용한것은 신기하게 느껴졌다.  
+
 if문에는 수 많은 버블 중에 드래그 영역 안에 포함된 버블들의 색깔을 늘리는 것이였고, 
-드래그영역안에 포함되는 경우에는 Dictionary가 해당 bubble의 key를 가지고 있는지 확인하였고 만약 가지고 있지 않았다면, prefab의 이름에서 값을 parsing하여 checkdict에 넣어주는 과정을 거쳤다. => 매 번 새로운 버블이 선택될때마다 checkdict에 바로바로 넣어줌
+드래그영역안에 포함되는 경우에는 Dictionary가 해당 bubble의 key를 가지고 있는지 확인하였고 만약 가지고 있지 않았다면, prefab의 이름에서 값을 parsing하여 checkdict에 넣어주는 과정을 거쳤다. => 매 번 새로운 버블이 선택될때마다 checkdict에 바로바로 넣어줌  
+
 
 이 후 마우스버튼을 떼면 UndoBubbles이 실행된다.
 돌아가게 한 다음 sum을 체크하는 과정을 거치고, sum에 checkdict의 key값을 이용하여(gameobject) value값을 얻어 sum에 더해준다. 

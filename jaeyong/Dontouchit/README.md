@@ -1,5 +1,12 @@
 # Dontouchit (Don't Touch It)
 
+![녹화_2021_07_13_18_04_00_191](https://user-images.githubusercontent.com/22047551/125424802-5430f7e3-479e-48d3-81a9-3c6d0d616134.gif)
+
+
+
+## 만드는 중 ISSUE
+Coroutine이 무엇인지, Singleton이 무엇인지, SerializeField에 대한 ISSUE
+
 ## Tilemap
 
 2D에서 Tilemap을 이용하여 바닥을 생성하였다. Tile Size와 Grid size가 다를 때에는 Sprite Image Inspector에서 Pixels per unit을 픽셀에 맞게 변경시켜주면 사이즈가 올바르게 변경된다.
@@ -53,7 +60,32 @@ Quaternion.Identity를 이용하여 오브젝트는 회전을 하지 못하게 �
 
 유니티 5부터 사용가능한 기능으로 애니메이터 상태에 따라 자동 호출이 된다.
 animator에서 빈 state를 만들어서 behaviour(행동)을 추가시킬 수 있는데 애니메이터에서 내 오브젝트를 Destroy시킬 수 있다. 진행 동작은 애니메이터에서 Idle 상태로 시작하여 ground 태그에 닿으면 trigger가 발생한다. (SetTrigger) 이 후 poop 상태로 애니메이터가 동작하고, poop상태가 끝나게 되면 (OnStateExit) Destroy를 진행한다.
+```cs
+override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Destroy(animator.gameObject);
+    }
+```
+
+
 
 ### 싱글톤 패턴
 
 최초 한번만 메모리에 할당하고 인스턴스를 만들어 사용하는 패턴. 싱글톤을 사용하면 다른 오브젝트에서 매니저로의 접근이 쉬워지고 한개만 존재해도 되는 매니저의 특성을 살릴 수 있다.
+```cs
+private static GameManager _instance;
+    public static GameManager instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = FindObjectOfType<GameManager>();
+            }
+            return _instance;
+        }
+    }
+```
+
+
+ref) https://www.youtube.com/watch?v=vPdD0Nk5-3U&t=307s

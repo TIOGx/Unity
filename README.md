@@ -20,9 +20,6 @@ ex2) [Project] 4장 개인 프로젝트
 <a href="https://github.com/JeongEunJi1127">
   <img src="https://github.com/JeongEunJi1127.png" width="100">
 </a>
-<a href="https://github.com/hij2696">
-  <img src="https://github.com/hij2696.png" width="100">
-</a>
 <a href="https://github.com/ggjae">
   <img src="https://github.com/ggjae.png" width="100">
 </a>
