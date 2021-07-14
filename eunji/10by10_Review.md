@@ -24,7 +24,6 @@ LobbyManager라는 빈 오브젝트에 LobbyManager.cs를 적용하여 로비화
 - 코드 분석
   - [SerializeField] <br> : 처음 보는 표현이었다. GameManager 스크립트에서도 많이 보였던 표현인데, 쉽게 private 변수여도 Inspector 창에서는 접근 가능하게 해주는 역할!
   - Start() 메소드<br> : 스크립트 실행시 time = 0으로 적용.
-  - Update() 메소드<br> : if문 역할이 모죠.....? 의미없는건가
   - StartGame() 메소드<br> : MainScene으로 씬 전환을 하게 하는 메소드.
   
 -----
@@ -48,6 +47,7 @@ LobbyManager라는 빈 오브젝트에 LobbyManager.cs를 적용하여 로비화
     - GameOverCanvas.SetActive(false) 를 통해 게임오버 화면 false로 설정. 보드를 호출.
   - update 메소드
     - 5장에서 배웠던 fill amount와 앵커포인트를 사용하여 timebar를 설정했다.
+      
       <img width="187" alt="스크린샷 2021-07-14 오후 3 03 49" src="https://user-images.githubusercontent.com/43170505/125571182-c9beb9c7-4275-46af-8922-77c285c72861.png">
     - 마우스를 클릭한 순간 마우스의 x,y 좌표가 MouseInit에 저장. 그 위치를 `ScreenToWorldPoint`를 사용하여 startSelectPos에도 저장. (그냥 스크린 좌표로 대입해주면 오류 발생할 수 있음. 따라서 ScreenToWorldPoint를 사용해 월드좌표값으로 변환해주는 거라고 한다.)
     - 마우스를 누르고 있는 동안의 좌표로 MouseDrag, SelectBubbles 메소드 호출! 
