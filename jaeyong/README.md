@@ -3,3 +3,4 @@
 - [Dontouchit](./Dontouchit)
 - [Roulette](./Roulette)
 - [SwipeCar](./SwipeCar)
+- [Tetris](./tetris)
