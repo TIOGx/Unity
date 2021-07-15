@@ -2,8 +2,11 @@
 
 🎅 게임 프로그래밍 - Unity 
 
-## Our Book
-[유니티 교과서](https://books.google.co.kr/books/about/%EC%9C%A0%EB%8B%88%ED%8B%B0_%EA%B5%90%EA%B3%BC%EC%84%9C_%EA%B0%9C%EC%A0%954%ED%8C%90.html?id=QhceEAAAQBAJ&redir_esc=y)
+## Review
+10by10
+
+## Practice
+Tetris, SwipeCar, Dontouchit, Roulette
 
 ## Repository Rule
 
@@ -27,9 +30,3 @@ ex2) [Project] 4장 개인 프로젝트
   <img src="https://github.com/recorder08.png" width="100">
 </a>
 </p>
-  
-
-
-### Opinion
-개인 폴더에 작성하여도 repository를 public으로 변경하는 순간 commit 메세지들이 기록에 남으므로 레포지토리를 정성껏 관리해주세요!
-
