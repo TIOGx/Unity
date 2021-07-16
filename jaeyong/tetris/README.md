@@ -17,6 +17,9 @@
 8. 내일 목표 : 나만의 좌표를 통해 타일 몇개가 들어갈 수 있을지 생각해서 직접 넣어보기. transform에서 localPosition 을 사용하면 좀 더 간편하게 나타낼 수 있지않을까?
 > https://docs.unity3d.com/kr/530/ScriptReference/Transform.html
 
+objbox에서 해야하는 일 : 타일을 네개 생성하기, 상하좌우로 이동할 수 있는지 Check하고 Update를 통해서 좌표 이동하기, 회전하기
+background에서 해야하는 일 : 백그라운드에 넣어줄 때마다 y값(부모)에 x값(자식)들 Check하기, objbox에서 좌표 받아서 background에 넣기
+
 
 ## 2021 07 15
 
