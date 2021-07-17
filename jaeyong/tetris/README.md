@@ -1,5 +1,40 @@
 # Tetris
 
+## 2021 07 17
+일단  함수들을 알려주자면
+
+```CS
+ bool check()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            Transform tf = objbox.transform.GetChild(i).transform;
+            if (tf.position.x < -topx || tf.position.x > topx || tf.position.y < -topy)
+            {
+                Debug.Log("너 꽉차있잖아");
+                return false;
+            }
+        }
+        return true;
+    }
+    void Gobackground()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if(objbox.transform.childCount >= 0)
+            {
+                Transform tf = objbox.transform.GetChild(0).transform;
+                tf.transform.SetParent(background.transform, true);
+            }
+            
+        }
+    }
+```
+으로, check함수를 이용하여 더 이상 진행할 수 없다고 판단이 되면, Gobackground()를 실행하게 된다.
+GetChild를 이용하여 한 부모(objbox)안에 함께 하던 Tile 프리팹 자식들을 background로 보내주었다. 여기서 중요한 점 : 내가 tf를 Setparent로 background로 보내주면 objbox의 child의 인덱스 값이 요동친다. ex) 0,1,2,3이 존재했는데 내가 0을 background의 자식으로 보냈다면, 1,2,3이 0,1,2로 다시 바뀐다. 따라서 **GetChild(0).transform**으로 background에게 보내주어야 함
+
+
+
 ## 2021 07 16
 200줄 가량 코딩을 하였음에도 불구하고 정상적인 회전이나, 작동에서 어려움을 보였다. Code 안에서 반복되는 줄들은 함수로 재사용성을 높여야하는데 재사용성뿐만 아니라 가독성도 떨어지게 되었다.
 생각을 다시 정리하여 코드를 재작성해야겠다. 
