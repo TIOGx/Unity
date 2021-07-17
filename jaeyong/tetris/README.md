@@ -30,8 +30,12 @@
         }
     }
 ```
-으로, check함수를 이용하여 더 이상 진행할 수 없다고 판단이 되면, Gobackground()를 실행하게 된다.
-GetChild를 이용하여 한 부모(objbox)안에 함께 하던 Tile 프리팹 자식들을 background로 보내주었다. 여기서 중요한 점 : 내가 tf를 Setparent로 background로 보내주면 objbox의 child의 인덱스 값이 요동친다. ex) 0,1,2,3이 존재했는데 내가 0을 background의 자식으로 보냈다면, 1,2,3이 0,1,2로 다시 바뀐다. 따라서 **GetChild(0).transform**으로 background에게 보내주어야 함
+으로 check함수를 이용하여 더 이상 진행할 수 없다고 판단이 되면 Gobackground()를 실행하게 된다.  
+GetChild를 이용하여 한 부모(objbox)안에 함께 하던 Tile 프리팹 자식들을 background로 보내주었다.   
+  
+여기서 중요한 점 : 내가 tf를 Setparent로 background로 보내주면 objbox의 child의 인덱스 값이 요동친다.  
+ex) 0,1,2,3이 존재했는데 내가 0을 background의 자식으로 보냈다면, 1,2,3이 0,1,2로 다시 바뀐다.  
+따라서 **GetChild(0).transform**으로 background에게 보내주어야 함
 
 
 
