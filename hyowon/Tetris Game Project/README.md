@@ -1,6 +1,8 @@
 # [Unity] 테트리스 만들기
 ### 현 상태
 
+<img src="https://user-images.githubusercontent.com/22341383/126055264-1def18c0-5e15-496f-8df5-79b21d70c50c.gif" width="40%">
+
 ### 진행도
 1. UI 구성
 2. background, Tetris Block object 생성
