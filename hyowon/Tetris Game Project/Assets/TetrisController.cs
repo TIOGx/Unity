@@ -104,6 +104,16 @@ public class TetrisController : MonoBehaviour
                 fTickTime = 0;
             }
         }
+        // 바로 내리기 기능 구현
+        else if(Input.GetKeyDown(KeyCode.S))
+        {
+            transform.position += new Vector3(0,-1,0);
+            while(IsMove()){
+                transform.position += new Vector3(0,-1,0);   
+            }
+            transform.position += new Vector3(0,1,0);
+            fTickTime = 1;
+        }
         else if(Input.GetKeyDown(KeyCode.A))
         {
             transform.RotateAround(transform.position,new Vector3(0,0,1), 90);
