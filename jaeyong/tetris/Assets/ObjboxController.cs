@@ -9,65 +9,123 @@ public class ObjboxController : MonoBehaviour
     [SerializeField]
     private GameObject objbox;
     [SerializeField]
-    private GameObject background;
-    private float topy = 4.7f;
+    private GameObject ground;
+    private Vector3 premove;
+    private float topy = 14.5f;
+    private float topx = 8f;
+    private float maxtimer = 1.0f;
+    private float timer = 0.0f;
+    private bool bar = false;
+    private int r = -1;
+    private bool[,] visit = new bool[9, 15];
 
-    // -4.74~y~4.74 , -2.56~x~2.56, ÇÑ yÁÂÇ¥¿¡ µé¾î°¥ ¼ö ÀÖ´Â Å¸ÀÏ °³¼ö 11°³
-    // ÇÑ Ä­¿¡ Â÷ÁöÇÏ´Â ±æÀÌ ) 0.5
-    void CreateTile(float x, float y)
-    {
-        GameObject tet = Instantiate(tile);
-        tet.transform.parent = objbox.transform;
-        tet.transform.localPosition = new Vector2(x, y);
-    }
-    void CreateTet()
-    {
-        objbox.transform.position = new Vector2(0, topy);
-        int r = Random.Range(0, 4);
-        if(r == 0)
-        {
-            CreateTile(0f, 0f);
-            CreateTile(0.5f, 0f);
-            CreateTile(-0.5f, 0f);
-            CreateTile(-1f, 0f);
-        }
-        if(r == 1)
-        {
-            CreateTile(0f, 0f);
-            CreateTile(0.5f, 0f);
-            CreateTile(-0.5f, 0f);
-            CreateTile(-0.5f, 0.5f);
-        }
-        if(r == 2)
-        {
-            CreateTile(0f, 0f);
-            CreateTile(0.5f, 0f);
-            CreateTile(-0.5f, 0f);
-            CreateTile(0.5f, 0.5f);
-        }
-        if(r == 3)
-        {
-            CreateTile(0f, 0f);
-            CreateTile(0.5f, 0f);
-            CreateTile(0f, 0.5f);
-            CreateTile(0.5f, 0.5f);
-        }
-        
-    }
+    // -4.74~y~4.74 , -2.56~x~2.56, ï¿½ï¿½ yï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½ï¿½î°¥ ï¿½ï¿½ ï¿½Ö´ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 11ï¿½ï¿½
+    // ï¿½ï¿½ Ä­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ) 0.5
 
-    bool check()
+    bool checkerror()
     {
-        return true;
+        for(int i=0;i<4;i++){
+            Transform tf = objbox.transform.GetChild(i).transform;
+            if((int)Mathf.Round(tf.position.x) < 0 || (int)Mathf.Round(tf.position.x) > topx){
+                Debug.Log("ë²”ìœ„ ë²—ì–´ë‚¨");
+                return true;
+            } if((int)Mathf.Round(tf.position.y) < 0 || (int)Mathf.Round(tf.position.y) > topy){
+                Debug.Log("ë²”ìœ„ ë²—ì–´ë‚¨2");
+                return true;
+            }
+            if(visit[(int)Mathf.Round(tf.position.x), (int)Mathf.Round(tf.position.y)]){
+                Debug.Log("ë¸”ëŸ¬ê¸° ì¡´ìž¬í•¨");
+                return true;
+            }
+        }
+        return false;
+    }
+    void Gobackground()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (objbox.transform.childCount > 0)
+            {
+                Transform tf = objbox.transform.GetChild(0).transform;
+                Vector3 pos = tf.transform.position;
+                visit[(int)Mathf.Round(pos.x), (int)Mathf.Round(pos.y)] = true;
+                tf.name = (int)Mathf.Round(pos.x)+","+(int)Mathf.Round(pos.y);
+                tf.transform.SetParent(ground.transform, true);
+            }
+
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        CreateTet();
+        for(int i=0;i<9;i++){
+            for(int j=0;j<15;j++){
+                visit[i,j] = false;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if()
+        timer += Time.deltaTime;
+        if (timer > maxtimer)
+        {
+            Debug.Log("ya" + objbox.transform.position);
+            timer = 0;
+            objbox.transform.Translate(0, -1f, 0, Space.World);
+            if(checkerror()){
+                objbox.transform.Translate(0, 1f, 0, Space.World);
+                Gobackground();
+                GameObject.FindWithTag("Generator").GetComponent<TileGenerator>().CreateTet();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && r != 3)
+        {
+            if (r == 1 && bar == false)
+            {
+                objbox.transform.RotateAround(objbox.transform.position, new Vector3(0, 0, 1), 90f);
+                bar = true;
+                if(checkerror()){
+                    objbox.transform.RotateAround(objbox.transform.position, new Vector3(0, 0, 1), -90f);
+                    bar = false;
+                }
+            }
+            if (r == 1 && bar == true)
+            {
+                objbox.transform.RotateAround(objbox.transform.position, new Vector3(0, 0, 1), -90f);
+                bar = false;
+                if(checkerror()){
+                    objbox.transform.RotateAround(objbox.transform.position, new Vector3(0, 0, 1), 90f);
+                    bar = true;
+                }
+            }
+            objbox.transform.RotateAround(objbox.transform.position, new Vector3(0, 0, 1), 90f);
+            if (checkerror())
+            {
+                objbox.transform.RotateAround(objbox.transform.position, new Vector3(0, 0, 1), -90f);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            objbox.transform.Translate(-1f, 0, 0, Space.World);
+            if(checkerror()){
+                objbox.transform.Translate(1f, 0, 0, Space.World);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            objbox.transform.Translate(1f, 0, 0, Space.World);
+            if(checkerror()){
+                objbox.transform.Translate(-1f, 0, 0, Space.World);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            objbox.transform.Translate(0, -1f, 0, Space.World);
+            if(checkerror()){
+                objbox.transform.Translate(0, 1f, 0, Space.World);
+            }
+        }
     }
 }
