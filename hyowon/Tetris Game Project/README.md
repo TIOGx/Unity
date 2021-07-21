@@ -1,7 +1,7 @@
 # [Unity] 테트리스 만들기
 ### 현 상태
 
-<img src="https://user-images.githubusercontent.com/22341383/126055264-1def18c0-5e15-496f-8df5-79b21d70c50c.gif" width="40%">
+<img src="https://user-images.githubusercontent.com/22341383/126471975-ba4c1003-b8f8-479f-8533-3d0275c7dc4a.gif" width="40%">
 
 ### 진행도
 1. UI 구성
