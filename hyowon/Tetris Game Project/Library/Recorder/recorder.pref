@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RecordMode: 0
   m_FrameRatePlayback: 0
-  m_FrameRateType: 7
+  m_FrameRateType: 4
   m_CustomFrameRateValue: 30
   m_StartFrame: 0
   m_EndFrame: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
   m_Name: Movie
   m_EditorClassIdentifier: 
   enabled: 1
-  take: 2
+  take: 3
   captureEveryNthFrame: 1
   fileNameGenerator:
     m_Path:

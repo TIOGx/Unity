@@ -6,11 +6,12 @@ using System;
 public class TetrisController : MonoBehaviour
 {
     private float fTickTime;
-    private static Transform [, ] arr = new Transform [20, 10];
+    private static Transform [, ] arr = new Transform [16, 10];
 
+    
     void RemoveRow(){
         bool flag;
-        for(int i =0; i <20;i++){
+        for(int i =0; i <16;i++){
             flag = true;
             for(int j =0;j<10;j++){
                 if(arr[i,j] == null){
@@ -24,7 +25,7 @@ public class TetrisController : MonoBehaviour
                 for(int j= 0;j<10;j++){
                     Destroy(arr[i,j].gameObject);
                 }
-                for (int k = i;k<19;k++){
+                for (int k = i;k<15;k++){
                     for(int j= 0;j<10;j++){
                         arr[k,j] = arr[k+1,j];
                         arr[k+1,j] = null;
@@ -60,7 +61,13 @@ public class TetrisController : MonoBehaviour
                 Debug.Log("범위 벗어나");
                 return false;
             }
-            // 이미 블럭이 있는경우
+
+            // // 이미 블럭이 있는경우
+            // if(arr[(int)Math.Round(nextpos.y),(int)Math.Round(nextpos.x)] != null && (int)Math.Round(nextpos.y) > 12)
+            // {
+            //     GameObject.Find("GameOver").SetActive(true);
+            //     return false;
+            // }
             if(arr[(int)Math.Round(nextpos.y),(int)Math.Round(nextpos.x)] != null)
             {
                 return false;
@@ -72,8 +79,8 @@ public class TetrisController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Transform [,] arr = new Transform [20,10];
- 
+        Transform [,] arr = new Transform [16,10];
+        
     }
     // Update is called once per frame
     void Update()

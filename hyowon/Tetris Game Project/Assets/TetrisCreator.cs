@@ -5,6 +5,7 @@ using UnityEngine;
 public class TetrisCreator : MonoBehaviour
 {
     public GameObject [] obj;
+    // public GameObject GameOver;
     public void CreatBlock()
     {
         Instantiate(obj[Random.Range(0,obj.Length)], transform.position, Quaternion.identity);
@@ -13,6 +14,8 @@ public class TetrisCreator : MonoBehaviour
     void Start()
     {
         CreatBlock();
+        // GameOver = GameObject.Find("GameOver");
+        // GameOver.SetActive(false);
     }
     // Update is called once per frame
     void Update()
