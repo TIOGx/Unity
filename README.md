@@ -7,12 +7,6 @@
 
 ## Practice
 Tetris, SwipeCar, Dontouchit, Roulette
-
-## Repository Rule
-
-**Commit Convention Rule** - [주제] 이름   
-ex1) [Practice] 1장 실습  
-ex2) [Project] 4장 개인 프로젝트
    
 ## Team Member
 
