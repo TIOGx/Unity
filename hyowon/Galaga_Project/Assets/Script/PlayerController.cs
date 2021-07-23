@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public int powerlevel;
     void Start()
     {
-        powerlevel = 1;
+        powerlevel = 0; // 초기 파워 설정
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Fire(){
-        Instantiate(Bullet[powerlevel], transform.position, Quaternion.identity);
+        Instantiate(Bullet[powerlevel], transform.position, Quaternion.Euler(0,0,90));
     }
     IEnumerator CountAttackDelay(){
         yield return new WaitForSeconds(reload);

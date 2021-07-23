@@ -503,10 +503,10 @@ MonoBehaviour:
   Speed: 3
   reload: 0.5
   Bullet:
-  - {fileID: 4660942008116761469, guid: 17976ce1fe6081f4bbb46917153cf6c5, type: 3}
-  - {fileID: 4660942008116761469, guid: 88323a58a69e6864da0420dac03a9199, type: 3}
+  - {fileID: 9090486917556080718, guid: f66587e32b1743a468eb1f8d0293fec2, type: 3}
+  - {fileID: 2890918057923487431, guid: 004c54a966be8904289d1f344ccc0ff7, type: 3}
   isDelay: 0
-  powerlevel: 1
+  powerlevel: 0
 --- !u!212 &1594396126
 SpriteRenderer:
   m_ObjectHideFlags: 0
