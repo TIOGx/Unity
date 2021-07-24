@@ -6,9 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed;
     public float reload;
+    public int playerHP;
     public GameObject[] Bullet;
     public bool isDelay;
     public int powerlevel;
+
+
     void Start()
     {
         powerlevel = 0; // 초기 파워 설정
@@ -16,6 +19,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
+        if(Input.GetKeyDown(KeyCode.A)){ //파워업키 귀찮아서 만듬
+            Powerup();
+        }
         Move(); // 움직임
         
         if(!isDelay){ // 코루틴을 통해 재장전 속도에 따른 총알 발사
@@ -24,6 +31,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(CountAttackDelay());
         }
     }   
+///////////////////////////////////////////////////////////////////////////////////////////
+
 
     void Move(){
         float Horizontal = Input.GetAxis("Horizontal");
@@ -39,15 +48,42 @@ public class PlayerController : MonoBehaviour
         if (pos.y < 0f) pos.y = 0f;
         if (pos.y > 1f) pos.y = 1f;
         PlayerPosition = Camera.main.ViewportToWorldPoint(pos); 
-
         transform.position = PlayerPosition; // Player 위치 조정
     }
 
+    
     void Fire(){
-        Instantiate(Bullet[powerlevel], transform.position, Quaternion.Euler(0,0,90));
+        switch(powerlevel){ // 파워레벨에 따른 무기변경 및 장탄수 변경
+            case 0:
+                Instantiate(Bullet[powerlevel], transform.position + new Vector3 (0,0.7f,0), Quaternion.Euler(0,0,90)); // 총알이 전투기의 앞에서 나가도록 연출
+                break;
+            case 1:
+                Instantiate(Bullet[powerlevel], transform.position + new Vector3 (-0.3f,0.7f,0), Quaternion.Euler(0,0,90)); // 총알이 전투기의 양옆에서 나가도록 연출
+                Instantiate(Bullet[powerlevel], transform.position + new Vector3 (0.3f,0.7f,0), Quaternion.Euler(0,0,90)); 
+                break;
+            case 2:
+                Instantiate(Bullet[powerlevel], transform.position + new Vector3 (0,0.7f,0), Quaternion.Euler(0,0,90)); // 총알이 전투기의 앞에서 3발 나가도록 연출
+                Instantiate(Bullet[powerlevel], transform.position + new Vector3 (-0.3f,0.7f,0), Quaternion.Euler(0,0,90));
+                Instantiate(Bullet[powerlevel], transform.position + new Vector3 (0.3f,0.7f,0), Quaternion.Euler(0,0,90)); 
+                break;
+        }
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("Fire");
     }
     IEnumerator CountAttackDelay(){
         yield return new WaitForSeconds(reload);
         isDelay = false;
-}
+    }
+    void Powerup(){
+        powerlevel += 1;
+    }
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.tag == "Item"){
+            // 아이템에 따른 효과 부여;
+            Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.tag == "Enemy"){// 플레이어 체력 감소
+            playerHP -= 1;
+            // Destroy(gameObject);
+        }
+    }
 }

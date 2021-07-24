@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 496119869773271165}
   m_Layer: 0
   m_Name: Bullet_2
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2890918057923487431}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd66f16c376ac04418d1c746fdb8fdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletdmg: 2
   bulletspeed: 5
 --- !u!50 &2218233271161025390
 Rigidbody2D:
