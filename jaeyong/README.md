@@ -4,3 +4,4 @@
 - [Roulette](./Roulette)
 - [SwipeCar](./SwipeCar)
 - [Tetris](./tetris)
+- [Gallag](./Gallag)
