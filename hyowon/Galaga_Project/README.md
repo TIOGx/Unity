@@ -2,7 +2,7 @@
 # [Unity] GALAGA 만들기
 ### 현 상태
 
-<img src="https://user-images.githubusercontent.com/22341383/126624315-252de8b7-37bf-4077-a620-771fd13be190.gif" width="40%">
+<img src="https://user-images.githubusercontent.com/22341383/126863928-09d9961f-3583-4fb4-a66a-5cfb60e29d57.gif" width="40%">
 
 ### 진행도
 1. 기능구현
