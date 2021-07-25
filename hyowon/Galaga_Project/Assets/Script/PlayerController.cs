@@ -66,6 +66,9 @@ public class PlayerController : MonoBehaviour
                 Instantiate(Bullet[powerlevel], transform.position + new Vector3 (-0.3f,0.7f,0), Quaternion.Euler(0,0,90));
                 Instantiate(Bullet[powerlevel], transform.position + new Vector3 (0.3f,0.7f,0), Quaternion.Euler(0,0,90)); 
                 break;
+            // case 3:
+            //     OnDrawGizmos();
+            //     break;
         }
         GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("Fire");
     }
@@ -76,7 +79,7 @@ public class PlayerController : MonoBehaviour
     void Powerup(){
         powerlevel += 1;
     }
-    void OnCollisionEnter2D(Collision2D collision){
+    void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Item"){
             // 아이템에 따른 효과 부여;
             Destroy(collision.gameObject);
@@ -86,4 +89,20 @@ public class PlayerController : MonoBehaviour
             // Destroy(gameObject);
         }
     }
+//     void OnDrawGizmos() {
+ 
+//         float maxDistance = 15f;
+//         RaycastHit hit;
+//         // Physics.Raycast (레이저를 발사할 위치, 발사 방향, 충돌 결과, 최대 거리)
+//         bool isHit = Physics.Raycast(transform.position, transform.forward, out hit, maxDistance);
+ 
+//         Gizmos.color = Color.red;
+//         if (isHit) {
+//             Gizmos.DrawRay(transform.position, transform.forward * hit.distance,Color.red,0.3f);
+//         } 
+//         else {
+//             Gizmos.DrawRay(transform.position, transform.forward * maxDistance,Color.red,0.3f);
+//         }
+//     }
+
 }
