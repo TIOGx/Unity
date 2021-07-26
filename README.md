@@ -20,7 +20,7 @@ Gallag(07/28 추가 예정), Tetris, SwipeCar, Dontouchit, Roulette
 <a href="https://github.com/ggjae">
   <img src="https://github.com/ggjae.png" width="100">
 </a>
-<a href="https://github.com/recorder08">
-  <img src="https://github.com/recorder08.png" width="100">
+<a href="https://github.com/leehyowonzero">
+  <img src="https://github.com/leehyowonzero.png" width="100">
 </a>
 </p>
