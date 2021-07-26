@@ -19,7 +19,8 @@
 > 플레이어의 점수와 다양한 UI 관리, Scene 관리 및 Score에 따른 변화들을 관리 get & and 연산 가능
 
 - LaserColl
-> Script의 이름은 LaserColl이지만, 다양한 laser collision들을 이 한 곳에서 묶어서 사용하게 된다. 각 laser 프리팹마다 적용시켜준 script로서 LaserColl이라고 붙이게 됨
+> Script의 이름은 LaserColl이지만, 다양한 laser collision들을 이 한 곳에서 묶어서 사용하게 된다. 각 laser 프리팹마다 적용시켜준 script로서 LaserColl이라고 붙이게 됨.
+> collision뿐만 아니라 particle까지도 여기서 다루게 됨
 
 - LaserController
 > 무기 레벨에 따라서 다양한 레이저를 사용할 수 있게 만든 script, LaserGenerator 역할
