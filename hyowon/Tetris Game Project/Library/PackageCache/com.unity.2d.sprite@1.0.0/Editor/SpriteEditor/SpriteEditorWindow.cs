@@ -55,15 +55,15 @@ namespace UnityEditor.U2D.Sprites
         }
 
         SpriteDataProviderFactory[] m_Factories;
-        MethodInfo[] m_AssetPathProvider;
-        MethodInfo[] m_SpriteObjectProvider;
+        TypeCache.MethodCollection m_AssetPathProvider;
+        TypeCache.MethodCollection m_SpriteObjectProvider;
 
         /// <summary>
         /// Initialized and collect methods with SpriteDataProviderFactoryAttribute and SpriteDataProviderAssetPathProviderAttribute.
         /// </summary>
         public void Init()
         {
-            var factories = EditorAssemblies.loadedTypes.Where(x => x.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(ISpriteDataProviderFactory<>))).ToArray();
+            var factories = TypeCache.GetTypesDerivedFrom(typeof(ISpriteDataProviderFactory<>));
             var factoryList = new List<SpriteDataProviderFactory>();
             foreach (var factory in factories)
             {
@@ -90,8 +90,8 @@ namespace UnityEditor.U2D.Sprites
                 }
             }
             m_Factories = factoryList.ToArray();
-            m_AssetPathProvider = EditorAssemblies.GetAllMethodsWithAttribute<SpriteEditorAssetPathProviderAttribute>(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic).ToArray();
-            m_SpriteObjectProvider = EditorAssemblies.GetAllMethodsWithAttribute<SpriteObjectProviderAttribute>(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic).ToArray();
+            m_AssetPathProvider = TypeCache.GetMethodsWithAttribute<SpriteEditorAssetPathProviderAttribute>();
+            m_SpriteObjectProvider = TypeCache.GetMethodsWithAttribute<SpriteObjectProviderAttribute>();
         }
 
         /// <summary>

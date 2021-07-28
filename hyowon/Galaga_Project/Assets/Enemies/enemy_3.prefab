@@ -140,6 +140,6 @@ MonoBehaviour:
   hp: 10
   isDelay: 0
   HaveItem:
-  - {fileID: 4978469092273588822, guid: 562e14d3d20823e4b8a8cff819738ca0, type: 3}
+  - {fileID: 7719415746299154035, guid: ff7f6068cc8f7e447bd261df215a2dcd, type: 3}
   - {fileID: 2422744286658480991, guid: 63cf4206ddbf97447a1caf6137e75f22, type: 3}
   - {fileID: 7925300684473089103, guid: 045d725501bebe548936fa28218a5676, type: 3}

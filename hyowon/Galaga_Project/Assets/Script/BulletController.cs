@@ -39,7 +39,7 @@ public class BulletController : MonoBehaviour
         
         else if(gameObject.tag == "EnemyBullet"){
             if(collision.gameObject.tag == "Player"){
-                GameObject.Find("Player_1").GetComponent<PlayerController>().playerHP -= 1;
+                GameObject.Find("Player_1").GetComponent<PlayerController>().Hpdown();
                 Destroy(gameObject);
                 Debug.Log("아야아야 아파요");
             }

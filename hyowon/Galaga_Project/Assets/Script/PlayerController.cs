@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     public float Speed;
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public GameObject[] Bullet;
     public bool isDelay;
     public int powerlevel;
+    public int Playerboom;
+    public GameObject gameOverSet;
 
 
     void Start()
@@ -22,6 +25,10 @@ public class PlayerController : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.A)){ //파워업키 귀찮아서 만듬
             Powerup();
+        }
+        else if(Input.GetKeyDown(KeyCode.S)){ //폭탄 사용키 
+            UseBoom();
+            
         }
         Move(); // 움직임
         
@@ -79,14 +86,56 @@ public class PlayerController : MonoBehaviour
     void Powerup(){
         powerlevel += 1;
     }
+    public void Hpdown(){
+        playerHP -= 1;
+        if(playerHP <= 0){
+            PlayerDie();
+        }
+    }
+    void PlayerDie(){
+        gameOverSet.SetActive(true);
+        GameObject.Find("EnemySpawner").SetActive(false);
+        Destroy(gameObject);
+    }
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Item"){
             // 아이템에 따른 효과 부여;
+            Debug.Log("템 먹음");
+            if(collision.gameObject.name == "Heart(Clone)"){
+                Debug.Log("체력 먹음");
+                if(playerHP<3){
+                    playerHP ++;
+                }
+            }
+            else if(collision.gameObject.name == "boom(Clone)"){
+                Debug.Log("폭탄 먹음");
+                Playerboom ++;
+            }
+            else if(collision.gameObject.name == "power(Clone)"){
+                Debug.Log("파워 먹음");
+                if(powerlevel <2){
+                    Powerup();
+                }
+            }
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.tag == "Enemy"){// 플레이어 체력 감소
-            playerHP -= 1;
+            Hpdown();
             // Destroy(gameObject);
+        }
+    }
+    void UseBoom(){
+        if(Playerboom > 0){
+            Playerboom -- ;
+            int cnt = 0;
+            cnt = GameObject.Find("EnemySpawner").GetComponent<EnemyCreator>().NowEnemies.Count;
+            for(int i = 0 ; i < cnt ; i++){
+                if(GameObject.Find("EnemySpawner").GetComponent<EnemyCreator>().NowEnemies[i] != null){
+                    GameObject.Find("EnemySpawner").GetComponent<EnemyCreator>().NowEnemies[i].GetComponent<EnemyController>().Damaged(100f);
+                }
+            }
+            Debug.Log("폭탄사용");
+
         }
     }
 //     void OnDrawGizmos() {

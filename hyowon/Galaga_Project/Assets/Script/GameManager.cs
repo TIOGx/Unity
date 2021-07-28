@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     void Update(){
-        if(Input.GetMouseButtonDown(0)){
-            LoadGame();
-        }
+
     }
     public void LoadGame()
     {
+        Debug.Log("게임 로드");
         SceneManager.LoadScene("GameScene");
     }
 }

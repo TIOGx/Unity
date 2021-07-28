@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
         if(hp <= 0){
             GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("Die");
             DropItem(); //죽을때 아이템 드롭
-
+            GameObject.Find("Score").GetComponent<ScoreBoard>().Score += 1;
             Destroy(gameObject);
         }
     }
@@ -63,7 +63,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void Damaged(float dmg){
+    public void Damaged(float dmg){
         hp -= dmg;
     }
 
