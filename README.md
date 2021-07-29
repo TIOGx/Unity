@@ -6,7 +6,7 @@
 10by10
 
 ## Practice
-Gallag(07/28 추가 예정), Tetris, SwipeCar, Dontouchit, Roulette
+Gallag, [Tetris](./hyowon/Tetris-Game-Project), SwipeCar, Dontouchit, Roulette
    
 ## Team Member
 
