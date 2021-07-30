@@ -1,6 +1,10 @@
 # Gallag 개별 프로젝트
 
-## Issue in developing
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/22047551/127617377-3dfc88d2-bebc-430f-8b00-4bf92e285af6.gif)
+
+용량때문에 프레임을 많이 낮췄습니다. [youtube](https://www.youtube.com/watch?v=sUYE5tX16_o)를 통하여 게임 영상을 볼 수 있습니다. :)
+
+## 스터디 의무 과제 아래 4가지 무조건 사용
 1. Coroutine : Player의 이동속도를 점점 높여줄 때 & LobbyScene에서의 button 투명도 조절할 때 & 정해진 시간동안 Upgrade Complete Text를 active시킬 때
 2. Singleton : GameManager를 한 객체로 GameManager.Instance를 통한 함수 접근을 가능케 함. 하나의 인스턴스만을 생성하는 책임을 두었지만 **DontDestroy**시키지 못함. LoadScene으로 재시작할 때 Destroy가 불가피하다고 생각이 듦.
 3. Particle : 레이저와 Enemy가 충돌할 때
