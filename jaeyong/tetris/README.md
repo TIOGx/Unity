@@ -1,5 +1,7 @@
 # Tetris
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/22047551/127613776-e817d925-684d-4ab6-80fb-ec2f5fc71206.gif)
+
 ## 2021 07 22
 테트리스 완성!  
 큰 흐름은 테트리스 블럭을 Generator에서 생성하고 visit이란 이름의 2차원 배열을 통해 이미 블럭이 존재하는지 체크하고 움직일 수 있는지 확인하게 된다.  
