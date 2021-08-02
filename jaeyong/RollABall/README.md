@@ -1,8 +1,8 @@
-# Roll - A - Ball
+# Roll - A - Ball - Unity 3D Private Project
 
-## Unity 3D Private Project
-
-내가 공이 되어 움직이며 Item을 전부 먹고 결승 지점에 들어가면 새로운 Level이 불러와지는 3D 기본 움직임 및 회전에 대하여 공부하기 위한 개인 프로젝트
+## 게임 설명
+공이 되어 움직이며 Item을 전부 먹게 된다.  
+전부 먹은 후 결승 지점에 들어가면 새로운 Level이 불러와지는 간단한 개인 프로젝트
 
 ### 210802
 
