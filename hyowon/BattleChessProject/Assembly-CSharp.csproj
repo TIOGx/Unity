@@ -38,6 +38,11 @@
   <ItemGroup>
      <Compile Include="Assets\Free Low Poly Chess Set\Example\Scripts\CameraRotate.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
+     <Compile Include="Assets\Scripts\BuildManager.cs" />
+     <Compile Include="Assets\Scripts\PieceController.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\AttackManager.cs" />
+     <Compile Include="Assets\Scripts\TurnManager.cs" />
      <None Include="Assets\Free Low Poly Chess Set\README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Unity/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -253,7 +258,7 @@
         <HintPath>D:/Unity/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/Unity/2020.3.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -601,34 +606,34 @@
         <HintPath>D:/Unity/2020.3.14f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/dlgyd/Documents/GitHub/MyUnityGame/BattleChessProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/dlgyd/Documents/GitHub/Unity/hyowon/BattleChessProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
