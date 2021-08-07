@@ -12,7 +12,7 @@ public class BuildManager : MonoBehaviour
     public void Start(){
         instance = this;
     }
-    public void BuildPiece(){
+    public void BuildPiece(GameObject Piece){
         Vector3 selectpos = SelectTile.transform.position;
         BuieldedPiece = Instantiate(Piece, selectpos, Quaternion.identity);
         GameManager.instance.Board[(int)selectpos.x, (int)selectpos.z] = BuieldedPiece;

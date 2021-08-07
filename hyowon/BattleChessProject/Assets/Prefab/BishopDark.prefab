@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1413500224256624267}
   m_Layer: 0
   m_Name: BishopDark
-  m_TagString: Untagged
+  m_TagString: BlackTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
