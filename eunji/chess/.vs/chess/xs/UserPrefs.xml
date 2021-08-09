@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{8DFB1D3F-3255-1DF3-6A5F-F2546B9D6B6B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuildManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="54" Column="35" />
+      <File FileName="Assets/Scripts/Tile.cs" Line="17" Column="6" />
+      <File FileName="Assets/Scripts/GameManager.cs" />
+      <File FileName="Assets/Scripts/PieceController.cs" />
+      <File FileName="Assets/Scripts/TurnManager.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="chess" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="BuildManager.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2e06347e-4c3e-4ff5-a3fc-ceada45292b4" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
