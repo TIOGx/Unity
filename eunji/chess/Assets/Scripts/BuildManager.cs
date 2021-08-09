@@ -8,7 +8,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
     public GameObject SelectTile;
-    public GameObject BuieldedPiece;
+    public GameObject BuildedPiece;
 
     [SerializeField]
     public GameObject[] PiecePrefab = new GameObject[5];
@@ -35,12 +35,16 @@ public class BuildManager : MonoBehaviour
     {
         Vector3 selectpos = SelectTile.transform.position;
 
-        BuieldedPiece = Instantiate(PiecePrefab[i], selectpos, Quaternion.identity);
+        BuildedPiece = Instantiate(PiecePrefab[i], selectpos, Quaternion.identity);
+        MovePieceCanvas.transform.SetParent(BuildedPiece.transform);
+        //Debug.Log(MovePieceCanvas.transform.parent);
 
-        GameManager.instance.Board[(int)selectpos.x, (int)selectpos.z] = BuieldedPiece;
+        GameManager.instance.Board[(int)selectpos.x, (int)selectpos.z] = BuildedPiece;
         ChoosePieceCanvas.SetActive(false);
 
-
+        Tile tile = SelectTile.GetComponent<Tile>();
+        Color Idle = tile.GetIdleColor();
+        tile.SetIdleColor(Idle);
     }
 
     public void SelectPiece()
@@ -60,8 +64,6 @@ public class BuildManager : MonoBehaviour
     }
     public void MovePiece()
     {
-        // move canvas 눌러서ㅓ 이동, 회전
-        // 턴종료
+       
     }
-
 }

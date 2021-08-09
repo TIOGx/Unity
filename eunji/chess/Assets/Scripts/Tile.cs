@@ -13,13 +13,26 @@ public class Tile : MonoBehaviour
         IdleColor = rend.material.color;
         SelectColor = Color.green;
     }
- 
-    private void OnMouseUp() {
-        if (this.gameObject.transform.position.z <= 1)
+    public Color GetIdleColor()
+    {
+        return IdleColor;
+    }
+    public void SetIdleColor(Color SetColor)
+    {
+        rend.material.color = SetColor;
+    }
+    private void OnMouseUp()
+    {
+        if (BuildManager.instance.SelectTile == this.gameObject)
+        {
+            rend.material.color = IdleColor;
+            BuildManager.instance.SelectTile = null;
+        }
+
+        else if (this.gameObject.transform.position.z <= 1)
         {
             rend.material.color = SelectColor;
             BuildManager.instance.SelectTile = this.gameObject;
         }
-     
     }
 }
