@@ -15,7 +15,11 @@ public class Tile : MonoBehaviour
     }
  
     private void OnMouseUp() {
-        rend.material.color = SelectColor;
-        BuildManager.instance.SelectTile = this.gameObject;
+        if (this.gameObject.transform.position.z <= 1)
+        {
+            rend.material.color = SelectColor;
+            BuildManager.instance.SelectTile = this.gameObject;
+        }
+     
     }
 }

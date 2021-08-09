@@ -63,6 +63,7 @@
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Resources/assetstore/Free Low Poly Chess Set/Example/Scripts/CameraRotate.cs" />
     <Compile Include="Assets/Scripts/Tile.cs" />
+    <Compile Include="Assets/Scripts/MoveManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

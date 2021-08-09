@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 226314478}
   - component: {fileID: 226314477}
   m_Layer: 5
-  m_Name: selectposCanvas
+  m_Name: SelectPosCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 403819242}
   - component: {fileID: 403819241}
   m_Layer: 5
-  m_Name: buildButton
+  m_Name: BuildButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4036,8 +4036,7 @@ MonoBehaviour:
   - {fileID: 5046002940324489476, guid: ac2ecd1a2e0b4db458e3d48f30323546, type: 3}
   - {fileID: 630453474625620774, guid: 46f2af392a6024a40a38dfde6507d5bd, type: 3}
   ChoosePieceCanvas: {fileID: 2025937699}
-  selectposCanvas: {fileID: 226314476}
-  aa: {fileID: 403819241}
+  SelectPosCanvas: {fileID: 226314476}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,7 +5043,7 @@ GameObject:
   - component: {fileID: 1062584482}
   - component: {fileID: 1062584481}
   m_Layer: 5
-  m_Name: EndTurn
+  m_Name: EndTurnButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

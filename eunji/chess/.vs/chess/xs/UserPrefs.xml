@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{8DFB1D3F-3255-1DF3-6A5F-F2546B9D6B6B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TurnManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tile.cs">
     <Files>
-      <File FileName="Assets/Scripts/AttackManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="16" Column="59" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="14" Column="37" />
-      <File FileName="Assets/Scripts/PieceController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TurnManager.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="60" Column="16" />
+      <File FileName="Assets/Scripts/Tile.cs" Line="18" Column="15" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PieceController.cs" Line="28" Column="13" />
+      <File FileName="Assets/Scripts/MoveManager.cs" Line="11" Column="30" />
+      <File FileName="Assets/Scripts/TurnManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
           <Node name="chess" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="TurnManager.cs" selected="True" />
+                <Node name="Tile.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5e14634b-2267-4f1b-a0a1-745c45490b94" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a9d14405-bbe3-4ff5-b505-03cbb0ccd290" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

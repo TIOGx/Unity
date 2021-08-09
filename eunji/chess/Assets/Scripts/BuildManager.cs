@@ -15,22 +15,31 @@ public class BuildManager : MonoBehaviour
 
     [SerializeField]
     public GameObject ChoosePieceCanvas;
-    public GameObject selectposCanvas;
+    public GameObject SelectPosCanvas;
+    public GameObject MovePieceCanvas;
 
+    IEnumerator SetActiveFalse(GameObject gameObject,float WaitSeconds)
+    {
+        yield return new WaitForSeconds(WaitSeconds);
+        gameObject.SetActive(false);
+    }
 
     public void Start(){
         instance = this;
         ChoosePieceCanvas.SetActive(false);
-        selectposCanvas.SetActive(false);
+        SelectPosCanvas.SetActive(false);
+        MovePieceCanvas.SetActive(false);
     }
 
-    public void BuildPiece(int i)
+    public void BuildPiece(int i) 
     {
         Vector3 selectpos = SelectTile.transform.position;
+
         BuieldedPiece = Instantiate(PiecePrefab[i], selectpos, Quaternion.identity);
 
         GameManager.instance.Board[(int)selectpos.x, (int)selectpos.z] = BuieldedPiece;
         ChoosePieceCanvas.SetActive(false);
+
 
     }
 
@@ -39,17 +48,20 @@ public class BuildManager : MonoBehaviour
         if (SelectTile == null)
         {
             Debug.Log("위치 선택 안함");
-            selectposCanvas.SetActive(true);
-
+            SelectPosCanvas.SetActive(true);
+            StartCoroutine(SetActiveFalse(SelectPosCanvas,1.5f));
         }
         else
         {
-            selectposCanvas.SetActive(false);
+            SelectPosCanvas.SetActive(false);
             ChoosePieceCanvas.SetActive(true);
         }
 
-      
-
+    }
+    public void MovePiece()
+    {
+        // move canvas 눌러서ㅓ 이동, 회전
+        // 턴종료
     }
 
 }

@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 3481059179370748044}
   - component: {fileID: 3469520909851600180}
   - component: {fileID: 3461851727791528266}
+  - component: {fileID: 7111082970515241133}
   m_Layer: 0
   m_Name: KnightLight 1
   m_TagString: Untagged
@@ -181,6 +182,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7111082970515241133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3483962410771218716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3085a61585b83408c806fd835f357c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6131613553269914152
 GameObject:
   m_ObjectHideFlags: 0
