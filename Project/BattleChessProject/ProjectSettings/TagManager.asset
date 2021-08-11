@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BlackTeam
   - WhiteTeam
+  - Map
   layers:
   - Default
   - TransparentFX

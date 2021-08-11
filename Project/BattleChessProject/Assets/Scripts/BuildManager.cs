@@ -33,18 +33,21 @@ public class BuildManager : MonoBehaviour
     public void BuildPiece(GameObject Piece) 
     {
         Vector3 selectpos = SelectTile.transform.position;
-        BuildedPiece = Instantiate(Piece, selectpos, Piece.transform.rotation);
-
+        if(GameManager.instance.Board[(int)selectpos.x, (int)selectpos.z] == null)
+        {
+            BuildedPiece = Instantiate(Piece, selectpos, Piece.transform.rotation);
+        }
+        else
+        {
+            Debug.Log("이미 있는 자리에 또 만드려고 했어요");
+            ChoosePieceCanvas.SetActive(false);
+            return;
+        }
         GameManager.instance.Board[(int)selectpos.x, (int)selectpos.z] = BuildedPiece;
-
+        GameManager.instance.InitializeTile();
         // GameDirector.instance.OpenBuildPieceUI();
         //Debug.Log(MovePieceCanvas.transform.parent);
         ChoosePieceCanvas.SetActive(false);
-
-        GameManager.instance.TileCount(-1);
-        Tile tile = SelectTile.GetComponent<Tile>();
-        Color Idle = tile.GetIdleColor();
-        tile.SetIdleColor(Idle);
     }
 
     public void SelectPiece()
