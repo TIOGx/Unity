@@ -9,36 +9,52 @@ public enum PieceType{
     Knight,
     Pawn,
     Queen,
-    Rook
+    Rook,
+    None
 }
 public class PieceController : MonoBehaviour
 {
 
-    // public PieceType piecetype;
+    private PieceType Piecetype;
+    private string TypeName;
     public float Hp;
     public float nowHp;
     public float OffensePower;
     public int Dir;
     public bool Attackable;
     public bool Movable;
-    private int[] dx = new int[]{0,1,0,-1};
-    private int[] dy = new int[]{1,0,-1,0};
+    public int[] dx = new int[]{0,1,0,-1,1,1,-1,-1};
+    public int[] dy = new int[]{1,0,-1,0,1,-1,1,-1};
     public GameObject hudDamageText;
     public Transform Hudpos;
     public GameObject HealthBar;
     void Start(){
+        TypeName = this.gameObject.name.Substring(0, 4);
         if(this.tag == "BlackTeam"){
             GameManager.instance.MyPiece.Add(this.gameObject);
+            if (TypeName == "Bish")
+                Piecetype = PieceType.Bishop;
+            else if (TypeName == "King")
+                Piecetype = PieceType.King;
+            else if (TypeName == "Knig")
+                Piecetype = PieceType.Knight; 
+            else if (TypeName == "Pawn")
+                Piecetype = PieceType.Pawn; 
+            else if (TypeName == "Quee")
+                Piecetype = PieceType.Queen;
+            else if(TypeName == "Rook")
+                Piecetype = PieceType.Rook;
+        
         }
         Dir = (int) (gameObject.transform.rotation.z / 90) % 4; // 0,1,2,3
         Attackable = false;
         Movable = false;
         nowHp = Hp;
-        
     }
-    public void Update(){
+    public PieceType GetPiecetype()
+    {
+        return Piecetype;
     }
-
     public void Damaged(float damage){
         // GameObject hudText = Instantiate(hudDamageText); 
         // hudText.transform.position = Hudpos.position;

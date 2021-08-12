@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 22be0144084cb8e478fc6839baf72cca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 22be0144084cb8e478fc6839baf72cca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -519,6 +519,9 @@ MonoBehaviour:
   OffensePower: 10
   Dir: 0
   Attackable: 0
+  Movable: 0
+  dx: 000000000100000000000000ffffffff0100000001000000ffffffffffffffff
+  dy: 0100000000000000ffffffff0000000001000000ffffffff01000000ffffffff
   hudDamageText: {fileID: 0}
   Hudpos: {fileID: 0}
   HealthBar: {fileID: 0}

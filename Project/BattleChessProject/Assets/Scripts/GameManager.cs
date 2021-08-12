@@ -23,22 +23,23 @@ public class GameManager : MonoBehaviour
         {
             for (int j = 0; j < 8; j++)
             {
-                GameObject go = Tiles[i, j];
+                GameObject GObject = Tiles[i, j];
                 for (int k = 0; k < 4; k++)
                 {
-                    go.transform.GetChild(k).gameObject.SetActive(false);
+                    GObject.transform.GetChild(k).gameObject.SetActive(false);
                 }
             }
         }
+        BuildManager.instance.InitializeSelectTile();
     }
-    public void HighlightTile(GameObject go)
+    public void HighlightTile(GameObject GObject) // 갈 수 있는 타일 highlight
     {
-        go.GetComponent<Tile>().Movable = true;
-        for(int i = 0; i < go.transform.childCount; i++)
+        GObject.GetComponent<Tile>().Movable = true;
+        for(int i = 0; i < GObject.transform.childCount; i++)
         {
-            go.transform.GetChild(i).gameObject.SetActive(true);
+            GObject.transform.GetChild(i).gameObject.SetActive(true);
         }
-        go.GetComponent<Animator>().Play("TileAnim");
+        GObject.GetComponent<Animator>().Play("TileAnim");
     }
     // 전투 페이즈 담당 함수    
     public void BattlePhase(){

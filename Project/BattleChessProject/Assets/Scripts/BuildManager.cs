@@ -29,7 +29,10 @@ public class BuildManager : MonoBehaviour
         // SelectPosCanvas.SetActive(false);
         // MovePieceCanvas.SetActive(false);
     }
-
+    public void InitializeSelectTile()
+    {
+        SelectTile = null;
+    }
     public void BuildPiece(GameObject Piece) 
     {
         Vector3 selectpos = SelectTile.transform.position;
