@@ -174,7 +174,6 @@ public class MoveManager : MonoBehaviour
                 {
                     moveflag = false;
                     GameManager.instance.Board[originx, originz].GetComponent<PieceController>().Move(x, z, originx, originz);
-                    Debug.Log("이미 다른 말이 점거하고 있거나, 이동할 수 없는 칸이에요");
                 }
             }
         }

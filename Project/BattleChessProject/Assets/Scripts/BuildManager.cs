@@ -2,13 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+public enum EClassType
+{
+    Warrior,
+    Wizard,
+    Archor,
+    None
+}
 
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
     public GameObject SelectTile;
     public GameObject BuildedPiece;
-
+    public EClassType ClassType;
     [SerializeField]
     public GameObject[] PiecePrefab = new GameObject[5];
 
@@ -21,6 +28,10 @@ public class BuildManager : MonoBehaviour
     {
         yield return new WaitForSeconds(WaitSeconds);
         gameObject.SetActive(false);
+    }
+    public void SetClassType(EClassType ct)
+    {
+        ClassType = ct;
     }
 
     public void Start(){
@@ -70,6 +81,6 @@ public class BuildManager : MonoBehaviour
     }
     public void MovePiece()
     {
-       
+        ;
     }
 }
