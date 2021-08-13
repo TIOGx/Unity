@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 7190188332786271386}
   - component: {fileID: 7190188332786271389}
   - component: {fileID: 7190188332786271388}
-  - component: {fileID: 7190188332786271391}
-  - component: {fileID: -763557225293816365}
+  - component: {fileID: 8930054645431500000}
   m_Layer: 0
   m_Name: DamageText
   m_TagString: Untagged
@@ -109,8 +108,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279440366
+  m_fontColor: {r: 0.9339623, g: 0.074893214, b: 0.074893214, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -172,7 +171,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!114 &7190188332786271391
+--- !u!114 &8930054645431500000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,23 +187,3 @@ MonoBehaviour:
   alphaSpeed: 1
   destroyTime: 2
   damage: 0
---- !u!114 &-763557225293816365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7190188332786271390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a2d72454c7ade4a976eb1cb07df262, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hp: 100
-  nowHp: 100
-  OffensePower: 10
-  Dir: 0
-  Attackable: 0
-  hudDamageText: {fileID: 0}
-  Hudpos: {fileID: 0}
-  HealthBar: {fileID: 0}
