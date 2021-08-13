@@ -1,0 +1,36 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PieceController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GameManager.cs" Line="130" Column="54" />
+      <File FileName="Assets/Scripts/PieceController.cs" Line="81" Column="17" />
+      <File FileName="Assets/Scripts/MoveManager.cs" Line="15" Column="18" />
+      <File FileName="Assets/Scripts/BuildManager.cs" />
+      <File FileName="Assets/Scripts/Tile.cs" />
+      <File FileName="Assets/Scripts/ArrowController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BattleChessProject" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="PieceController.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="36e61ff6-ca72-4124-9975-3d93f5279961" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jeong-eunji/Desktop/Unity/Project/BattleChessProject/Assets/Scripts/UIManager.cs" relfile="Assets/Scripts/UIManager.cs" line="8" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
