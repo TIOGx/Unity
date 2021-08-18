@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{82A10DB5-0B45-DC40-345E-C6BD201944D6}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BuildManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraManager.cs">
     <Files>
       <File FileName="Assets/Scripts/UIManager.cs" Line="17" Column="21" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="18" Column="23" />
-      <File FileName="Assets/Scripts/BuildManager.cs" Line="82" Column="79" />
-      <File FileName="Assets/Scripts/MoveManager.cs" Line="114" Column="26" />
-      <File FileName="Assets/Scripts/PieceController.cs" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="158" Column="74" />
+      <File FileName="Assets/Scripts/BuildManager.cs" Line="74" Column="22" />
+      <File FileName="Assets/Scripts/MoveManager.cs" Line="71" Column="44" />
+      <File FileName="Assets/Scripts/PieceController.cs" Line="172" Column="30" />
       <File FileName="Assets/Scripts/Tile.cs" />
       <File FileName="Assets/Scripts/ArrowController.cs" />
+      <File FileName="Assets/Scripts/CameraManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +16,7 @@
           <Node name="BattleChessProject" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="BuildManager.cs" selected="True" />
+                <Node name="CameraManager.cs" selected="True" />
               </Node>
               <Node name="TextMesh Pro" expanded="True" />
             </Node>
