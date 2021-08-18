@@ -56,24 +56,25 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ExtinguishableFire.cs" />
-    <Compile Include="Assets/Scripts/ArrowController.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleMenu.cs" />
-    <Compile Include="Assets/Scripts/PieceController.cs" />
-    <Compile Include="Assets/Scripts/DamageText.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/DecalDestroyer.cs" />
-    <Compile Include="Assets/EffectExamples/TutorialInfo/Scripts/Readme.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleExamples.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/ParticleCollision.cs" />
-    <Compile Include="Assets/Scripts/CameraManager.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/GunShoot.cs" />
-    <Compile Include="Assets/Scripts/BuildManager.cs" />
-    <Compile Include="Assets/Scripts/MoveManager.cs" />
-    <Compile Include="Assets/Scripts/GameManager.cs" />
-    <Compile Include="Assets/Scripts/Tile.cs" />
-    <Compile Include="Assets/Resources/assetstore/Free Low Poly Chess Set/Example/Scripts/CameraRotate.cs" />
-    <Compile Include="Assets/Scripts/UIManager.cs" />
-    <Compile Include="Assets/EffectExamples/Shared/Scripts/GunAim.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\Scripts\ArrowController.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Scripts\PieceController.cs" />
+    <Compile Include="Assets\Scripts\DamageText.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\Scripts\BuildManager.cs" />
+    <Compile Include="Assets\Scripts\MoveManager.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Tile.cs" />
+    <Compile Include="Assets\Resources\assetstore\Free Low Poly Chess Set\Example\Scripts\CameraRotate.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Scripts\LobbyManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
