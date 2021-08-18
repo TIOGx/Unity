@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour // 게임에 사용된 UI들을 관리하는 매니저
 {
@@ -14,11 +14,11 @@ public class UIManager : MonoBehaviour // 게임에 사용된 UI들을 관리하
     private GameObject SelectPosCanvas;
     [SerializeField]
     private GameObject ChooseClassCanvas;
+    [SerializeField]
+    private TextMeshProUGUI teamcolorCanvas;
 
-    public GameObject GetSelectCanvas()
-    {
-        return SelectPosCanvas;
-    }
+
+
 
     // ChoosePieceCanvas
     public void ChooseCanvasFalse()
@@ -39,6 +39,10 @@ public class UIManager : MonoBehaviour // 게임에 사용된 UI들을 관리하
     {
         SelectPosCanvas.SetActive(true);
     }
+    public GameObject GetSelectCanvas()
+    {
+        return SelectPosCanvas;
+    }
 
     //ChooseClassCanvas
     public void ChooseClassCanvasFalse()
@@ -48,6 +52,13 @@ public class UIManager : MonoBehaviour // 게임에 사용된 UI들을 관리하
     public void ChooseClassCanvasTrue()
     {
         ChooseClassCanvas.SetActive(true);
+    }
+
+    //teamcolorCanvas
+    public TextMeshProUGUI GeteamcolorCanvas()
+    {
+        return teamcolorCanvas;
+
     }
 
     public void Start()

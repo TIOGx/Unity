@@ -11,14 +11,11 @@ public class CameraManager : MonoBehaviour
     private Quaternion OriginCamerarot;
     private Vector3 SharedCamerapos;
     private Quaternion SharedCamerarot;
+
     void Start()
     {
         instance = this;
         BlackTeamCameraOn();
-        //SharedCamerapos = new Vector3(3.5f, 7.05f, 3.5f);
-        //SharedCamerarot = Quaternion.Euler(90f, 0, 0);
-        //SharedCamerapos = new Vector3(3.5f, 7.05f, 3.5f);
-        //SharedCamerarot = Quaternion.Euler(90f, 180f, 0);
     }
     void Update()
     {
@@ -39,10 +36,26 @@ public class CameraManager : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
 
+            //if (GameManager.instance.GetPlayer())
+            //{
+            //    SharedCamerapos = new Vector3(3.5f, 7.05f, 3.5f);
+            //    SharedCamerarot = Quaternion.Euler(90f, 0, 0);
+            //    TeamOriginTransform.position = Vector3.Lerp(TeamOriginTransform.position, SharedCamerapos, 0.2f);
+            //    TeamOriginTransform.rotation = Quaternion.Lerp(TeamOriginTransform.rotation, SharedCamerarot, 0.2f);
+            //    yield return null;
+
+            //}
+            //else
+            //{
+            //    SharedCamerapos = new Vector3(3.5f, 7.05f, 3.5f);
+            //    SharedCamerarot = Quaternion.Euler(90f, 180f, 0);
+            //    TeamOriginTransform.position = Vector3.Lerp(TeamOriginTransform.position, SharedCamerapos, 0.2f);
+            //    TeamOriginTransform.rotation = Quaternion.Lerp(TeamOriginTransform.rotation, SharedCamerarot, 0.2f);
+            //    yield return null;
+            //}
             TeamOriginTransform.position = Vector3.Lerp(TeamOriginTransform.position, SharedCamerapos, 0.2f);
             TeamOriginTransform.rotation = Quaternion.Lerp(TeamOriginTransform.rotation, SharedCamerarot, 0.2f);
             yield return null;
-
         }
         TeamOriginTransform.position = SharedCamerapos;
         TeamOriginTransform.rotation = SharedCamerarot;
@@ -75,17 +88,15 @@ public class CameraManager : MonoBehaviour
             SharedCamerapos = new Vector3(3.5f, 7.05f, 3.5f);
             SharedCamerarot = Quaternion.Euler(90f, 0, 0);
             StartCoroutine(CameraMoveCoroutine(BlackTeamC.transform));
-            
 
         }
         else
         {
-            OriginCamerapos = WhiteTeamC.transform.position;
-            OriginCamerarot = WhiteTeamC.transform.rotation;
             SharedCamerapos = new Vector3(3.5f, 7.05f, 3.5f);
             SharedCamerarot = Quaternion.Euler(90f, 180f, 0);
+            OriginCamerapos = WhiteTeamC.transform.position;
+            OriginCamerarot = WhiteTeamC.transform.rotation;
             StartCoroutine(CameraMoveCoroutine(WhiteTeamC.transform));
-            
 
         }
     }
