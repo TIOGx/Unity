@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539804161150697211}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.121, y: 0.971, z: 0.24699995}
+  m_LocalPosition: {x: -0.121, y: 0.971, z: -0.2469999}
   m_LocalScale: {x: 0.049999986, y: 0.05, z: 0.14999999}
   m_Children: []
   m_Father: {fileID: 3481059179370748044}
@@ -229,11 +229,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyClass: 0
+  TypeName: 
   Hp: 100
   nowHp: 100
   OffensePower: 10
   Dir: 0
-  Attackable: 0
   Movable: 0
   Arrow: {fileID: 0}
   SpawnedArrow: {fileID: 0}
@@ -376,7 +376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6131613553269914152}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0.124, y: 0.971, z: 0.24699995}
+  m_LocalPosition: {x: 0.124, y: 0.971, z: -0.2469999}
   m_LocalScale: {x: 0.049999986, y: 0.05, z: 0.14999999}
   m_Children: []
   m_Father: {fileID: 3481059179370748044}
@@ -472,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6350034354017140323}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0.115, y: 0.974, z: 0.19499995}
+  m_LocalPosition: {x: 0.115, y: 0.974, z: -0.1949999}
   m_LocalScale: {x: 0.09999997, y: 0.1, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 3481059179370748044}
@@ -643,7 +643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7526420107855084631}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0.13, y: 0.974, z: 0.19499995}
+  m_LocalPosition: {x: -0.13, y: 0.974, z: -0.1949999}
   m_LocalScale: {x: 0.09999997, y: 0.1, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 3481059179370748044}

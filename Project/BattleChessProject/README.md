@@ -9,7 +9,7 @@
 - [사용자 설명서](#게임-규칙-설명)
 - [상세 기획](#상세-기획)
 - [버그 및 기능 요청](#버그-및-기능-요청)
-
+- [함수 정리](./chess function.md)
 * * *
 
 ## 게임 장르
@@ -125,17 +125,4 @@
 
 ```
 
-## 진행도
-Scripts
 
-Scripts GameManager = 게임의 전반적인 진행(턴종료 및 전투페이즈)을 담당함 추후에 승리조건 추가 예정Scripts BuildManager = 피스의 생성 담당Scripts PieceController = 피스 개개인의 공격함수 및 변수(공격력, 체력, 방향) 저장Scripts Tiles = 타일 선택시 초록불 들어오게 간단히 만들어둠. 추후 삭제 예정
-
-GameObject
-
-GameObject Board = 8*8 Tiles 로 구성GameObject  GameManager 
-
-GameObject BuildManager 
-
-GameObject Piece = prefab 으로 블랙비숍(아군, Tag = BlackTeam), 화이트비숍(적군, Tag =  WhiteTeam)
-
-진행도 설명 : 현재 4개의 버튼 조작을 통해 아군 피스와 적군 피스를 생성하여 공격 및 턴 종료를 실행 할 수 있음.공격의 경우 생성한 턴에는 불가능하며 1회의 공격만 가함 , 공격 범위는 바라보고 있는 방향의 바로 앞칸 적군 피스만 공격 가능.
