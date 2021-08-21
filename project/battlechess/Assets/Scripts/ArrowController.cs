@@ -9,7 +9,7 @@ public class ArrowController : MonoBehaviour
     public float Damage;
     void Start()
     {
-        this.GetComponent<Rigidbody>().AddForce(new Vector3(dx, 0, dz), ForceMode.Impulse);
+        this.GetComponent<Rigidbody>().AddForce(new Vector3(dx, 0, dz) * 3, ForceMode.Impulse);
     }
 
     // Update is called once per frame

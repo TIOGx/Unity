@@ -192,7 +192,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 2783532262613772850}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -288,7 +288,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4119248001481742040}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -425,16 +425,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a2d72454c7ade4a976eb1cb07df262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyClass: 2
+  MyEClass: 0
+  TypeName: 
   Hp: 100
   nowHp: 100
   OffensePower: 10
   Dir: 0
-  Attackable: 0
   Movable: 0
-  Arrow: {fileID: 0}
+  Arrow: {fileID: 5997305959101033549, guid: 5959a1e6fb41bde44992e47f1244ef03, type: 3}
   SpawnedArrow: {fileID: 0}
-  Lightning: {fileID: 7248175018392972734, guid: 332958713921265439ae83f4400a2c50, type: 3}
+  Lightning: {fileID: 7248175018392972734, guid: 58145899ab324488e968c048c9161da4, type: 3}
   SpawnedLightning: {fileID: 0}
   dx: 000000000100000000000000ffffffff0100000001000000ffffffffffffffff
   dz: 0100000000000000ffffffff0000000001000000ffffffff01000000ffffffff
@@ -712,7 +712,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 8093999027048829857}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -808,7 +808,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 9130474015476914370}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
