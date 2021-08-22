@@ -1,29 +1,65 @@
 fileFormatVersion: 2
 guid: 4624469227a5e4142aa4dffbc1bd3fcc
-timeCreated: 1520984943
-licenseType: Store
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Desk02_LOD0
-    100004: Desk02_LOD1
-    100006: Desk02_LOD2
-    400000: //RootNode
-    400002: Desk02_LOD0
-    400004: Desk02_LOD1
-    400006: Desk02_LOD2
-    2100000: Desk02__Untitled_001
-    2300000: Desk02_LOD0
-    2300002: Desk02_LOD1
-    2300004: Desk02_LOD2
-    3300000: Desk02_LOD0
-    3300002: Desk02_LOD1
-    3300004: Desk02_LOD2
-    4300000: Desk02_LOD2
-    4300002: Desk02_LOD1
-    4300004: Desk02_LOD0
-    20500000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Desk02_LOD0
+  - first:
+      1: 100004
+    second: Desk02_LOD1
+  - first:
+      1: 100006
+    second: Desk02_LOD2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Desk02_LOD0
+  - first:
+      4: 400004
+    second: Desk02_LOD1
+  - first:
+      4: 400006
+    second: Desk02_LOD2
+  - first:
+      21: 2100000
+    second: Desk02__Untitled_001
+  - first:
+      23: 2300000
+    second: Desk02_LOD0
+  - first:
+      23: 2300002
+    second: Desk02_LOD1
+  - first:
+      23: 2300004
+    second: Desk02_LOD2
+  - first:
+      33: 3300000
+    second: Desk02_LOD0
+  - first:
+      33: 3300002
+    second: Desk02_LOD1
+  - first:
+      33: 3300004
+    second: Desk02_LOD2
+  - first:
+      43: 4300000
+    second: Desk02_LOD2
+  - first:
+      43: 4300002
+    second: Desk02_LOD1
+  - first:
+      43: 4300004
+    second: Desk02_LOD0
+  - first:
+      205: 20500000
+    second: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -31,7 +67,7 @@ ModelImporter:
       name: Desk02__Untitled_001
     second: {fileID: 2100000, guid: 331fc00609e32ee49ba77e0390acb675, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -48,6 +84,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -65,21 +102,31 @@ ModelImporter:
     globalScale: 100
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 51
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -87,10 +134,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -100,14 +150,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 100
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
