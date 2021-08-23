@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -25,7 +25,8 @@ public class DamageText : MonoBehaviour
         text.color = alpha;
     }
 
-    private void DestroyObject(){
+    private void DestroyObject()
+    {
         Destroy(gameObject);
     }
 }
