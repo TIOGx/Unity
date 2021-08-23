@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637650444134407510
+      ticks: 637652977457990247
     m_Hash: 3623310934
   m_LockFileStatus:
     m_FilePath: C:/Users/dlgyd/Documents/GitHub/Unity/project/battlechess/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637650444134407510
+      ticks: 637652977457990247
     m_Hash: 2303839062
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
