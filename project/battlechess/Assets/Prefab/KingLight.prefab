@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 4333910710229300175}
   - component: {fileID: 3309523503885633967}
   - component: {fileID: -7621030161997263014}
+  - component: {fileID: 5155812540979476758}
   m_Layer: 0
   m_Name: KingLight
   m_TagString: WhiteTeam
@@ -536,6 +537,7 @@ MonoBehaviour:
   nowHp: 100
   OffensePower: 10
   Dir: 0
+  Attackable: 0
   Movable: 0
   Arrow: {fileID: 5997305959101033549, guid: 5959a1e6fb41bde44992e47f1244ef03, type: 3}
   SpawnedArrow: {fileID: 0}
@@ -546,6 +548,25 @@ MonoBehaviour:
   hudDamageText: {fileID: 7190188332786271390, guid: 98e63fa1e16494c49bf426fbaa07f940, type: 3}
   Hudpos: {fileID: 4245807141704552657}
   HealthBar: {fileID: 851525721511541333}
+--- !u!95 &5155812540979476758
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504661091720991031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41b0e2bb7970517459ff26e9070e7d27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7688187208539544366
 GameObject:
   m_ObjectHideFlags: 0

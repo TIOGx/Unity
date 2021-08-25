@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: -8515287138453677679}
   - component: {fileID: 6091537531225306478}
   - component: {fileID: 5193077358951434006}
+  - component: {fileID: -310091716787840542}
   m_Layer: 0
   m_Name: KnightDark
   m_TagString: BlackTeam
@@ -531,6 +532,7 @@ MonoBehaviour:
   nowHp: 100
   OffensePower: 20
   Dir: 0
+  Attackable: 0
   Movable: 0
   Arrow: {fileID: 5997305959101033549, guid: 5959a1e6fb41bde44992e47f1244ef03, type: 3}
   SpawnedArrow: {fileID: 0}
@@ -541,6 +543,25 @@ MonoBehaviour:
   hudDamageText: {fileID: 7190188332786271390, guid: 98e63fa1e16494c49bf426fbaa07f940, type: 3}
   Hudpos: {fileID: 2946486755251535084}
   HealthBar: {fileID: 6147277577255959832}
+--- !u!95 &-310091716787840542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956115736028984299}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41b0e2bb7970517459ff26e9070e7d27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4740286686056242388
 GameObject:
   m_ObjectHideFlags: 0

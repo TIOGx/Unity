@@ -8948,11 +8948,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildBlackPiece
-        m_Mode: 2
+        m_MethodName: SetPieceType
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 5077323300253181535, guid: 7dbe81a78933e457b9bfadfcf23da5dc, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8960,11 +8960,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildWhitePiece
-        m_Mode: 2
+        m_MethodName: BuildPiece
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2513231961732223281, guid: baa458ac9911b4a1baebacef2c644bd5, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13704,6 +13704,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644c1e66690e0a34fb6e1e1f1c5f27b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Piece:
+  - {fileID: 2727407537783372895, guid: 11b98ecac26c6c744a3e3e17fdc3526c, type: 3}
+  - {fileID: 3956115736028984299, guid: 2a311bd8183ac41d7a0d713e44de325f, type: 3}
+  - {fileID: 5077323300253181535, guid: 93f67ebfef5995d44a417c3aca2341c4, type: 3}
+  - {fileID: 5808098586833121838, guid: f40c8139057f44852a3656fddea790a1, type: 3}
+  - {fileID: 9087554349024309735, guid: 5706153a3799c4b688c8628f2d15d446, type: 3}
+  - {fileID: 2207234393264339893, guid: 92fe99b3eebb3104ab19f626d607b6e5, type: 3}
+  - {fileID: 3483962410771218716, guid: 7e3ca360b3aee7f43bb95c5ea6a7f821, type: 3}
+  - {fileID: 2513231961732223281, guid: 0e02c23d2f1b3e244b8ee61e1406ad9a, type: 3}
+  - {fileID: 5046002940324489476, guid: 1d7a519d60fb74566ae8ed5ac5856f27, type: 3}
+  - {fileID: 630453474625620774, guid: 6449306c6d88db24f8618613c14f0531, type: 3}
   SelectTile: {fileID: 0}
   BuildedPiece: {fileID: 0}
   ClassType: 0
@@ -16476,11 +16487,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildBlackPiece
-        m_Mode: 2
+        m_MethodName: SetPieceType
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 2727407537783372895, guid: 72bcbebc8215a4217a12458c05e0eb32, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -16488,11 +16499,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildWhitePiece
-        m_Mode: 2
+        m_MethodName: BuildPiece
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2207234393264339893, guid: c72d6dbb261544b3e83d4e79eb9572de, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19919,11 +19930,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildBlackPiece
-        m_Mode: 2
+        m_MethodName: SetPieceType
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 9087554349024309735, guid: 5706153a3799c4b688c8628f2d15d446, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19931,11 +19942,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildWhitePiece
-        m_Mode: 2
+        m_MethodName: BuildPiece
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 630453474625620774, guid: 6ef50dd1c4e3d4330ac1ed0c22635335, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27655,8 +27666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4, y: -40}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: -4, y: -43}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1665990639
 MonoBehaviour:
@@ -34885,11 +34896,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildBlackPiece
-        m_Mode: 2
+        m_MethodName: SetPieceType
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 3956115736028984299, guid: 2a311bd8183ac41d7a0d713e44de325f, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -34897,11 +34908,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildWhitePiece
-        m_Mode: 2
+        m_MethodName: BuildPiece
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 3483962410771218716, guid: 8336ef5b3be9945e4ae1b099d5cb5ae9, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -36376,11 +36387,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildBlackPiece
-        m_Mode: 2
+        m_MethodName: SetPieceType
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 5808098586833121838, guid: f40c8139057f44852a3656fddea790a1, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
@@ -36388,11 +36399,11 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 871848831}
         m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
-        m_MethodName: BuildWhitePiece
-        m_Mode: 2
+        m_MethodName: BuildPiece
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 5046002940324489476, guid: 1d7a519d60fb74566ae8ed5ac5856f27, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
