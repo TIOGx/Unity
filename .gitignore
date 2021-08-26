@@ -11,7 +11,7 @@
 [Uu]ser[Ss]ettings/
 
 # 필요에 따라 주석을 풀 수 있는 것
-[Pp]ackages/ 
+[Pp]ackages/
 [Pp]roject[Ss]ettings/
 
 ### Unity ###
@@ -68,6 +68,7 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
+*.DS_store
 
 # Crashlytics generated file
 crashlytics-build.properties
