@@ -1,18 +1,23 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/unity
 # Edit at https://www.toptal.com/developers/gitignore?templates=unity
+
+# add by jaeyong
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# 필요에 따라 주석을 풀 수 있는 것
+[Pp]ackages/
+[Pp]roject[Ss]ettings/
 
 ### Unity ###
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
-project/battlechess/[Ll]ibrary/
-project/battlechess/[Tt]emp/
-project/battlechess/[Oo]bj/
-project/battlechess/[Bb]uild/
-project/battlechess/[Bb]uilds/
-project/battlechess/Logs/
-project/battlechess/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -63,6 +68,7 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
+*.DS_store
 
 # Crashlytics generated file
 crashlytics-build.properties
@@ -76,3 +82,7 @@ crashlytics-build.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
 # 포함할 폴더들을 추가한다. 
+
+# Testing
+
+/[Aa]sset/*
