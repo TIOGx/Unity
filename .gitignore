@@ -83,6 +83,3 @@ crashlytics-build.properties
 # End of https://www.toptal.com/developers/gitignore/api/unity
 # 포함할 폴더들을 추가한다. 
 
-# Testing
-
-/[Aa]sset/*
